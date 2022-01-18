@@ -5,17 +5,23 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppMenuComponent } from './app-menu/app-menu.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
+import { DashboardComponent} from './dashboard/dashboard.component';
+import { DivisionsComponent } from './divisions/divisions.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppHeaderComponent,
     AppMenuComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    DashboardComponent,
+    DivisionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
