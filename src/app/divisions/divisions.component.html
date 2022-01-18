@@ -30,14 +30,15 @@
                     <tr *ngFor= "let i of li">
                         <td style= "text-align: left;">{{i.name}}</td>
                         <td style= "text-align: left;"> {{i.description}}</td>
-                        <button value={{i.id}} style= "text-align: center;">X</button>
+                        <button value={{i._id}} (click)= "hapusDivisi($any($event).target.value)" style= "text-align: center;">X</button>
                     </tr>
                 </tbody>
             </table>
         </div>    
         <div class="container-fluid">
-            <textarea id="nama" name="namaInput" placeholder="Input Nama"></textarea> <br>
-            <textarea id="description" name="descriptionInput" placeholder="Input Deskripsi"></textarea> 
+            <input type="text" #namaInput placeholder="Input Nama"/>
+            <input type="text" #descInput placeholder="Input Deskripsi" style= "margin-left: 10px;"/>
+            <button (click)= "tambahDivisi(namaInput.value, descInput.value)">Tambahkan Data</button>
         </div>
     </section>
 </div>
